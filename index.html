@@ -12,26 +12,53 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
+        .futuristic-gradient {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 25%, #24243e 50%, #0f0c29 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(147, 51, 234, 0.3);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(147, 51, 234, 0.6);
+        }
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
     </style>
 </head>
-<body class="bg-white">
+<body class="futuristic-gradient text-white">
     <!-- Header -->
-    <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header class="glass sticky top-0 z-50 border-b border-cyan-400/40">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-gray-900">People Partners Tech</div>
+                <div class="text-xl font-bold bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">People Partners Tech</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#servicos" class="text-gray-600 hover:text-gray-900 transition">Serviços</a>
-                    <a href="#sobre" class="text-gray-600 hover:text-gray-900 transition">Sobre</a>
-                    <a href="#contato" class="text-gray-600 hover:text-gray-900 transition">Contato</a>
+                    <a href="#servicos" class="text-cyan-200 hover:text-cyan-300 transition font-medium">Serviços</a>
+                    <a href="#sobre" class="text-cyan-200 hover:text-cyan-300 transition font-medium">Sobre</a>
+                    <a href="#contato" class="text-cyan-200 hover:text-cyan-300 transition font-medium">Contato</a>
                 </div>
-                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-medium">
+                <button class="bg-gradient-to-r from-cyan-400 to-purple-400 text-white px-6 py-2 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition font-medium neon-glow shadow-lg shadow-cyan-500/50">
                     Fale Conosco
                 </button>
             </div>
@@ -39,21 +66,24 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="relative py-20 lg:py-32 overflow-hidden cyber-grid">
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                    Construa o time tech que sua empresa merece
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 neon-text">
+                    <span class="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Construa o time tech que sua empresa merece
+                    </span>
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                     Consultoria especializada em contratação de profissionais técnicos. 
                     Reduzimos significativamente o risco de contratações erradas, economizando seu tempo e recursos.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition font-semibold text-lg shadow-lg">
+                    <button class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-xl hover:from-cyan-400 hover:to-purple-400 transition font-semibold text-lg neon-glow transform hover:scale-105">
                         Começar Agora
                     </button>
-                    <button class="bg-white text-blue-600 px-8 py-4 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition font-semibold text-lg">
+                    <button class="glass text-cyan-400 px-8 py-4 rounded-xl border-2 border-cyan-500/50 hover:border-cyan-400 transition font-semibold text-lg hover:bg-cyan-500/10">
                         Saiba Mais
                     </button>
                 </div>
@@ -62,14 +92,14 @@
     </section>
 
     <!-- Problema/Solução Section -->
-    <section id="sobre" class="py-20 bg-white">
+    <section id="sobre" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                         O problema que resolvemos
                     </h2>
-                    <div class="space-y-4 text-gray-600 text-lg">
+                    <div class="space-y-4 text-gray-300 text-lg">
                         <p>
                             Muitas empresas contratam errado na área tech, perdendo tempo, dinheiro e oportunidades. 
                             Seu time técnico está ocupado demais para se dedicar ao processo de recrutamento.
@@ -80,39 +110,39 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl p-8">
+                <div class="glass rounded-3xl p-8 border border-cyan-500/30 neon-glow">
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4">
-                            <div class="bg-blue-600 text-white rounded-full p-3">
+                            <div class="bg-gradient-to-br from-cyan-500 to-purple-500 text-white rounded-xl p-3 shadow-lg">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Match Perfeito</h3>
-                                <p class="text-gray-600">Encontramos o profissional ideal para sua necessidade específica</p>
+                                <h3 class="font-semibold text-cyan-400 mb-1 text-lg">Match Perfeito</h3>
+                                <p class="text-gray-300">Encontramos o profissional ideal para sua necessidade específica</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="bg-blue-600 text-white rounded-full p-3">
+                            <div class="bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-xl p-3 shadow-lg">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Economia de Tempo</h3>
-                                <p class="text-gray-600">Seu time foca no que importa enquanto nós cuidamos da contratação</p>
+                                <h3 class="font-semibold text-purple-400 mb-1 text-lg">Economia de Tempo</h3>
+                                <p class="text-gray-300">Seu time foca no que importa enquanto nós cuidamos da contratação</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="bg-blue-600 text-white rounded-full p-3">
+                            <div class="bg-gradient-to-br from-pink-500 to-cyan-500 text-white rounded-xl p-3 shadow-lg">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Maior Taxa de Sucesso</h3>
-                                <p class="text-gray-600">Processo estruturado que reduz significativamente o risco de contratações erradas</p>
+                                <h3 class="font-semibold text-pink-400 mb-1 text-lg">Maior Taxa de Sucesso</h3>
+                                <p class="text-gray-300">Processo estruturado que reduz significativamente o risco de contratações erradas</p>
                             </div>
                         </div>
                     </div>
@@ -122,41 +152,41 @@
     </section>
 
     <!-- Serviços Section -->
-    <section id="servicos" class="py-20 bg-gray-50">
+    <section id="servicos" class="py-20 relative cyber-grid">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     Como trabalhamos
                 </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
                     Processo estruturado para garantir o melhor resultado
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition">
-                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl font-bold text-blue-600">1</span>
+                <div class="glass rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400 transition transform hover:scale-105 hover:neon-glow">
+                    <div class="bg-gradient-to-br from-cyan-500 to-purple-500 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl font-bold text-white">1</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Entendemos sua necessidade</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">Entendemos sua necessidade</h3>
+                    <p class="text-gray-300">
                         Analisamos sua cultura, stack tecnológica e perfil ideal do profissional que você busca.
                     </p>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition">
-                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl font-bold text-blue-600">2</span>
+                <div class="glass rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400 transition transform hover:scale-105 hover:neon-glow">
+                    <div class="bg-gradient-to-br from-purple-500 to-pink-500 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl font-bold text-white">2</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Buscamos e selecionamos</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-bold text-purple-400 mb-3">Buscamos e selecionamos</h3>
+                    <p class="text-gray-300">
                         Utilizamos nossa rede e expertise para encontrar os melhores candidatos do mercado.
                     </p>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition">
-                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-2xl font-bold text-blue-600">3</span>
+                <div class="glass rounded-2xl p-8 border border-pink-500/30 hover:border-pink-400 transition transform hover:scale-105 hover:neon-glow">
+                    <div class="bg-gradient-to-br from-pink-500 to-cyan-500 w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl font-bold text-white">3</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Entregamos o match perfeito</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-bold text-pink-400 mb-3">Entregamos o match perfeito</h3>
+                    <p class="text-gray-300">
                         Apresentamos candidatos pré-qualificados que realmente fazem sentido para sua empresa.
                     </p>
                 </div>
@@ -165,27 +195,29 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="contato" class="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+    <section id="contato" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 opacity-90"></div>
+        <div class="absolute inset-0 cyber-grid opacity-30"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Pronto para construir seu time tech?
             </h2>
-            <p class="text-xl text-blue-100 mb-8">
+            <p class="text-xl text-gray-200 mb-8">
                 Fale conosco e descubra como podemos ajudar sua empresa a contratar os melhores talentos.
             </p>
-            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition font-semibold text-lg shadow-lg">
+            <button class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-xl hover:from-cyan-400 hover:to-purple-400 transition font-semibold text-lg shadow-2xl neon-glow transform hover:scale-105">
                 Agendar uma conversa
             </button>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
+    <footer class="glass border-t border-cyan-500/20 text-gray-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <div class="text-xl font-bold text-white mb-4">People Partners Tech</div>
-                <p class="mb-4">Consultoria especializada em contratação de profissionais técnicos</p>
-                <p class="text-sm">© 2024 People Partners Tech. Todos os direitos reservados.</p>
+                <div class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">People Partners Tech</div>
+                <p class="mb-4 text-gray-300">Consultoria especializada em contratação de profissionais técnicos</p>
+                <p class="text-sm text-gray-500">© 2024 People Partners Tech. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
