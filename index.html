@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -45,6 +48,12 @@
                 linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
             background-size: 50px 50px;
         }
+        .logo-glow {
+            filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5)) drop-shadow(0 0 12px rgba(147, 51, 234, 0.3));
+        }
+        .logo-glow:hover {
+            filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.7)) drop-shadow(0 0 16px rgba(147, 51, 234, 0.5));
+        }
     </style>
 </head>
 <body class="futuristic-gradient text-white">
@@ -52,15 +61,18 @@
     <header class="glass sticky top-0 z-50 border-b border-cyan-400/40">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">People Partners Tech</div>
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="logo.jpg" alt="People Partners Tech" class="h-8 md:h-10 lg:h-12 w-auto object-contain transition-all logo-glow">
+                    <span class="text-xl font-bold bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">People Partners Tech</span>
+                </a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#servicos" class="text-cyan-200 hover:text-cyan-300 transition font-medium">Serviços</a>
                     <a href="#sobre" class="text-cyan-200 hover:text-cyan-300 transition font-medium">Sobre</a>
                     <a href="#contato" class="text-cyan-200 hover:text-cyan-300 transition font-medium">Contato</a>
                 </div>
-                <button class="bg-gradient-to-r from-cyan-400 to-purple-400 text-white px-6 py-2 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition font-medium neon-glow shadow-lg shadow-cyan-500/50">
+                <a href="https://wa.me/5544998047955?text=Olá!%20Vi%20o%20site%20da%20People%20Partners%20Tech%20e%20tenho%20interesse%20em%20conhecer%20melhor%20os%20serviços%20de%20contratação%20de%20profissionais%20técnicos.%20Podemos%20conversar?" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-400 to-purple-400 text-white px-6 py-2 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition font-medium neon-glow shadow-lg shadow-cyan-500/50 inline-block">
                     Fale Conosco
-                </button>
+                </a>
             </div>
         </nav>
     </header>
@@ -80,12 +92,12 @@
                     Reduzimos significativamente o risco de contratações erradas, economizando seu tempo e recursos.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-xl hover:from-cyan-400 hover:to-purple-400 transition font-semibold text-lg neon-glow transform hover:scale-105">
+                    <a href="https://wa.me/5544998047955?text=Olá!%20Vi%20o%20site%20da%20People%20Partners%20Tech%20e%20tenho%20interesse%20em%20conhecer%20melhor%20os%20serviços%20de%20contratação%20de%20profissionais%20técnicos.%20Podemos%20conversar?" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-xl hover:from-cyan-400 hover:to-purple-400 transition font-semibold text-lg neon-glow transform hover:scale-105 inline-block text-center">
                         Começar Agora
-                    </button>
-                    <button class="glass text-cyan-400 px-8 py-4 rounded-xl border-2 border-cyan-500/50 hover:border-cyan-400 transition font-semibold text-lg hover:bg-cyan-500/10">
+                    </a>
+                    <a href="#sobre" class="glass text-cyan-400 px-8 py-4 rounded-xl border-2 border-cyan-500/50 hover:border-cyan-400 transition font-semibold text-lg hover:bg-cyan-500/10 inline-block text-center">
                         Saiba Mais
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -205,9 +217,9 @@
             <p class="text-xl text-gray-200 mb-8">
                 Fale conosco e descubra como podemos ajudar sua empresa a contratar os melhores talentos.
             </p>
-            <button class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-xl hover:from-cyan-400 hover:to-purple-400 transition font-semibold text-lg shadow-2xl neon-glow transform hover:scale-105">
+            <a href="https://wa.me/5544998047955?text=Olá!%20Vi%20o%20site%20da%20People%20Partners%20Tech%20e%20tenho%20interesse%20em%20conhecer%20melhor%20os%20serviços%20de%20contratação%20de%20profissionais%20técnicos.%20Podemos%20conversar?" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-xl hover:from-cyan-400 hover:to-purple-400 transition font-semibold text-lg shadow-2xl neon-glow transform hover:scale-105 inline-block">
                 Agendar uma conversa
-            </button>
+            </a>
         </div>
     </section>
 
@@ -215,7 +227,9 @@
     <footer class="glass border-t border-cyan-500/20 text-gray-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <div class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">People Partners Tech</div>
+                <div class="flex justify-center mb-4">
+                    <img src="logo.jpg" alt="People Partners Tech" class="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+                </div>
                 <p class="mb-4 text-gray-300">Consultoria especializada em contratação de profissionais técnicos</p>
                 <p class="text-sm text-gray-500">© 2024 People Partners Tech. Todos os direitos reservados.</p>
             </div>

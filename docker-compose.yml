@@ -7,5 +7,6 @@ services:
       - "8080:80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./logo.jpg:/usr/share/nginx/html/logo.jpg:ro
     container_name: peoplepartners-tech
     restart: unless-stopped
